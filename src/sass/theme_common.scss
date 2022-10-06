@@ -1,0 +1,190 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+//Custom Scroll Bar
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #585858;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+*{
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+// Font Sizes
+p{
+    font-size: 14px;
+    user-select: none;
+}
+
+span{
+    user-select: none;
+}
+
+a{
+    font-size: 14px;
+    user-select: none;
+}
+
+h2{
+    font-size: 48px;
+    user-select: none;
+}
+
+h5{
+    font-size: 48px;
+    user-select: none;
+}
+
+h6{
+    font-size: 28px;
+    user-select: none;
+}
+
+// ---------------------------------------------
+// Common Button Style
+// ---------------------------------------------
+.button {
+    &.alternative {
+        --color-hover: #d37100;
+        --background: #f38e00;
+        --hover-back: #ffbc40;
+        --hover-front: #F6F8FF;
+    }
+}
+
+.button {
+    --color: #fff;
+    --color-hover: var(--color);
+    --background: #f38e00;
+    --background-hover: var(--background);
+    --hover-back: #ffbc40;
+    --hover-front: #ffbe65;
+    padding: 8px 28px;
+    border-radius: 12px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    color: var(--c, var(--color));
+    background: var(--b, var(--background));
+    transition: color .2s linear var(--c-d, .2s), background .3s linear var(--b-d, .2s);
+    &:not(.simple) {
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            background: var(--pb, var(--hover-back));
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200%;
+            border-radius: var(--br, 40%);
+            transform: translateY(var(--y, 50%));
+            transition: transform var(--d, .4s) ease-in var(--d-d, 0s), border-radius .5s ease var(--br-d, .08s);
+
+        }
+        &:after {
+            --pb: var(--hover-front);
+            --d: .44s;
+        }
+    }
+    div {
+        z-index: 1;
+        position: relative;
+        display: flex;
+        span {
+            display: block;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            animation: var(--name, none) .7s linear forwards .18s;
+        }
+    }
+    &.in {
+        --name: move;
+        &:not(.out) {
+            --c: var(--color-hover);
+            --b: var(--background-hover);
+            &:before,
+            &:after {
+                --y: 0;
+                --br: 5%;
+            }
+            &:after {
+                --br: 10%;
+                --d-d: .02s;
+            }
+        }
+        &.out {
+            --name: move-out;
+            &:before {
+                --d-d: .06s;
+            }
+        }
+    }
+}
+
+@keyframes move {
+    30%,
+    36% {
+        transform: translateY(calc(-6px * var(--move))) translateZ(0) rotate(calc(-13deg * var(--rotate) * var(--part)));
+    }
+    50% {
+        transform: translateY(calc(3px * var(--move))) translateZ(0) rotate(calc(6deg * var(--rotate) * var(--part)));
+    }
+    70% {
+        transform: translateY(calc(-2px * var(--move))) translateZ(0) rotate(calc(-3deg * var(--rotate) * var(--part)));
+    }
+}
+
+@keyframes move-out {
+    30%,
+    36% {
+        transform: translateY(calc(6px * var(--move))) translateZ(0) rotate(calc(13deg * var(--rotate) * var(--part)));
+    }
+    50% {
+        transform: translateY(calc(-3px * var(--move))) translateZ(0) rotate(calc(-6deg * var(--rotate) * var(--part)));
+    }
+    70% {
+        transform: translateY(calc(2px * var(--move))) translateZ(0) rotate(calc(3deg * var(--rotate) * var(--part)));
+    }
+}
+// ---------------------------------------------
+// Common Button Style End
+// ---------------------------------------------
+
+
+body{
+    background: $color-8;
+}
+

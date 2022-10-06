@@ -1,0 +1,178 @@
+.page-content{
+
+    &.about-us-page{
+
+        //Style Simple Tiles Section
+        .second-section{
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .verticle-gap{
+                padding-top: 25px;
+            }
+
+            //Style Tiles
+            .tile{
+                height: 500px;
+                border-radius: 16px;
+
+                //Style tile background image
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                &.tile-one{
+                    color: $color-4;
+                    font-weight: 500;
+                        font-family: $font-2;
+
+                    h2{
+                         font-size: 64px;
+                    }
+
+                    h5{
+                        font-size: 28px;
+                        max-width: 234px;
+                    }
+                }
+                &.tile-two{
+                    color: $color-6;
+                    font-weight: 500;
+                        font-family: $font-2;
+
+                    h2{
+                         font-size: 64px;
+                    }
+
+                    h5{
+                        font-size: 28px;
+                        max-width: 234px;
+                    }
+                }
+                &.tile-three{
+                    display: flex;
+                    justify-content:flex-end;
+                    color: $color-6;
+                    font-weight: 500;
+                        font-family: $font-2;
+
+                    h2{
+                         font-size: 64px;
+                    }
+
+                    h5{
+                        font-size: 28px;
+                        max-width: 234px;
+                    }
+                }
+                &.tile-four{
+                    display: flex;
+                    align-items: flex-end;
+                    color: $color-4;
+                    font-weight: 500;
+                        font-family: $font-2;
+
+                    h2{
+                         font-size: 64px;
+                    }
+
+                    h5{
+                        font-size: 28px;
+                    }
+                }
+
+                .wrapper{
+                   padding: 40px; 
+                }
+            }
+        }
+        
+        //Style Team section
+        .team-section{
+            background: #323535;
+
+            // Spacing
+            padding-top: 100px;
+            padding-bottom: 140px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+
+            .section-title{
+                padding-bottom: 120px;
+
+                h2{
+                    color: $color-4;
+                    font-weight: 500;
+                    font-family: $font-2;
+                    text-align: center;
+                }
+            }
+
+            //Style Team Memers
+            .team-members{
+                display: flex;
+                justify-content: center;
+
+                .member-image{
+                    width: 100%;
+                    border-radius: 16px;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .member-title{
+                    padding-top: 20px;
+                    
+                    h2{
+                        color: $color-4;
+                        font-weight: 500;
+                        font-family: $font-2;
+                    }
+
+                    span{
+                        font-size: 22px;
+                        color: $color-4;
+                        font-weight: 100;
+                        font-family: $font-2;
+                    }
+                }
+            }
+            //Style Team Memers (Position Members)
+            .team-members-position{
+                display: flex;
+                justify-content: center;
+
+                padding-top: 60px;
+
+                .member-image{
+                    border-radius: 16px;
+                    width: 100%;
+
+                    img{
+                        border-radius: 16px;
+                        width: 100%;
+                    }
+                }
+
+                .member-title{
+                    padding-top: 20px;
+
+                    h2{
+                        color: $color-4;
+                        font-weight: 500;
+                        font-family: $font-2;
+                    }
+
+                    span{
+                        font-size: 22px;
+                        color: $color-4;
+                        font-weight: 100;
+                        font-family: $font-2;
+                    }
+                }
+            }
+        }
+    }
+}

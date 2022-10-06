@@ -1,0 +1,53 @@
+@use "sass:math";
+
+//Colors
+$color-1: #ffbe65;
+$color-2: #f38e00;
+$color-3: #000;
+$color-4: #FFFFFF;
+$color-5: #413F4B;
+$color-6: #1D1D1F;
+$color-7: #2C2C2C;
+$color-8: #F6F5F3;
+$color-9: #EE8321;
+
+//Fonts
+$font-1 : 'Poppins', sans-serif;
+$font-2 : 'Inter', sans-serif;
+
+//layout radious
+$layout-radius: 30px;
+
+// Mixins
+//  Style Default Text
+@mixin default-text-style($size: 14px,  $weignt: 700, $transform: uppercase, $color: #fff, $max-width: none, $family: $font-2, $text-align: left) {
+    font-family: $family;
+    font-size: $size;
+    text-transform: $transform;
+    font-weight: $weignt;
+    text-align: $text-align;
+    color: $color;
+    user-select: none;
+    max-width: $max-width;
+
+    @include media-breakpoint-down(xl){
+      @if $size == 14px{
+        font-size: ($size)-2px;
+      }
+      @else{
+        font-size: ($size)-10px;
+      }
+    }
+  }
+
+
+@mixin layout-curve($color: $color-1, $border-top-left-radius: 0, $border-top-right-radius: 0, $border-bottom-left-radius: 0, $border-bottom-right-radius: 0, $width: 100% , $height: 100px){
+  background: $color;
+  border-top-left-radius: $border-top-left-radius;
+  border-top-right-radius: $border-top-right-radius;
+  border-bottom-left-radius: $border-bottom-left-radius;
+  border-bottom-right-radius: $border-bottom-right-radius;
+  width: $width;
+  height: $height;
+}
+

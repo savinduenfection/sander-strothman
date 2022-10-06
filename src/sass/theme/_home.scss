@@ -1,0 +1,282 @@
+.page-content {
+
+    &.home-page {
+        overflow: hidden;
+
+        //Style Accordion
+        .accordion-section{
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .accordion-spacing{
+                padding-left: 0;
+
+                //Style Accordian Section Title
+                .section-title{
+                    text-align: center;
+
+                    h2{
+                        font-weight: 600;
+                        font-family: $font-2;
+                        color: #212121;
+                    }
+
+                    p{
+                        font-size: 18px;
+                        font-weight: 400;
+                        font-family: $font-2;
+                        color: #1D1D1F;
+
+                        padding-top: 10px;
+                    }
+                }
+
+                .accordion-row{
+                    display: flex;
+                    align-items: center;
+
+                    .accordian-image{
+                        img{
+                            width: 80%;
+                        }
+                    }
+    
+                    //Style According
+                    .accordion{
+    
+                        .accordion-item{
+                            border-bottom: 2px solid #EE8321;
+                            margin-bottom: 35px;
+                            
+                            .accordion-button{
+                                background: $color-8;
+                                padding-left: 4px;
+                                padding-bottom: 8px;
+
+                                //Typography
+                                font-size: 28px;
+                                font-weight: 400;
+                                font-family: $font-2;
+                                user-select: none;
+                                color: #212121;
+
+                                &:not(.collapsed)::after {
+                                    background-image: url("../assets/images/-.png");
+                                    transform: rotate(-180deg);
+                                }
+
+                                &::after{
+                                    background-image: url("../assets/images/+.png");
+                                }
+
+                                &:focus{
+                                    border-color: none;
+                                    box-shadow: none;
+                                }
+                            }
+    
+                            .accordion-body{
+                                background: $color-8;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        //Style What Client Say Section
+        .third-section{
+            padding-bottom: 50px;
+
+            h2{
+                font-weight: 600;
+                font-family: $font-2;
+                user-select: none;
+                text-align: center;
+                color: #212121;
+
+                //Spacing
+                padding-bottom: 50px;
+            }
+
+            p{
+                font-weight: 500;
+                font-family: $font-2;
+                font-size: 28px;
+                user-select: none;
+                text-align: center;
+                line-height: 44px;
+                color: $color-9;
+            }
+        }
+
+        //Sytle Our Latest News Section
+        .fourth-section{
+            padding-top: 50px;
+            padding-bottom: 100px;
+
+            h2{
+                font-weight: 600;
+                text-align: center;
+                font-family: $font-2;
+                color: #212121
+            }
+
+            //Read More Btn Style
+            .read-more{
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 80px;
+
+                button{
+                    font-weight: 600;
+                    font-size: 14px;
+                    text-decoration: none;
+                    font-family: $font-2;
+                    padding: 10px 20px;
+                    text-transform: uppercase;
+                }
+            }
+
+            //Style News cards Carosal
+            .carosal-width{
+                width: auto;
+
+                .news-card{
+                    .image{
+                        position: relative;
+    
+                        img{
+                            width: 100%;
+                            border-radius: 20px;
+                            object-fit: cover;
+                        }
+    
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                }
+    
+                .card-bottom{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 25px;
+    
+                    span{
+                        user-select: none;
+                        font-size: 14px;
+                        font-weight: 400;
+                        font-family: $font-2;
+                        color: #757575;
+                    }
+    
+                    .news-title{
+                        a{
+                            text-decoration: none;
+    
+                            h6{
+                                max-width: 205px;
+                                font-weight: 600;
+                                list-style: 22px;
+                                font-family: $font-2;
+                                color: #424242;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Style Contact Us Section
+        .contact-us-section{
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .section-bg{
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 20px;
+                height: 85vh;
+
+                //Display Properties
+                display: flex;
+                align-items: center;
+
+                .content{
+                    margin-left: 40px;
+                    margin-right: 40px;
+
+                    .title{
+                        background: #fff;
+                        padding: 25px;
+                        border-radius: $layout-radius;
+
+                        h2{
+                            font-weight: 600;
+                            font-family: $font-2;
+                            max-width: 290px;
+                            line-height: 50px;
+                            color: #2C2C2C;
+                        }
+
+                        p{
+                            font-family: $font-2;
+                            font-weight: 400;
+                            font-size: 20px;
+                            color: #757575;
+                            max-width: 362px;
+                            padding-top: 10px;
+                        }
+                    }
+
+                    .space{
+                        height: 20px;
+
+                        .space-2{
+                            height: 20px;
+                            background: #fff;
+                        }
+                    }
+
+                    .action{
+                        background: #fff;
+                        padding: 25px 20px;
+                        border-radius: $layout-radius;
+
+                        margin-left: 40px;
+                        margin-right: 60px;
+
+                        //Display Properties
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        button{
+                            font-family: $font-2;
+                            font-weight: 600;
+                            font-size: 14px;
+                            text-decoration: none;
+                            text-transform: uppercase;
+
+                            &.button{
+                                padding: 8px 20px;
+                            }
+                        }
+                        a{
+                            font-family: $font-2;
+                            font-weight: 600;
+                            font-size: 14px;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: $color-6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

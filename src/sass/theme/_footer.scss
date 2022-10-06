@@ -1,0 +1,234 @@
+footer {
+  .footer-content {
+    padding-bottom: 80px;
+
+    // Top Title
+    .footer-top {
+      .layout-bg-org {
+        width: 100%;
+        height: 100%;
+
+        .top-left-sup {
+          background: $color-1;
+
+          .top-left-curve {
+            
+            @include media-breakpoint-down(md){
+              display: none;
+            }
+
+            // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+            @include layout-curve($color-8, 0, 0, 0, $layout-radius, 100%, 130px);
+          }
+        }
+
+        .top-space {
+
+          @include media-breakpoint-down(md){
+            display: none;
+          }
+
+          // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+          @include layout-curve($color-1, $layout-radius, 0, 0, 0, 100%, 152px);
+
+          @include media-breakpoint-down(xl){
+            @include layout-curve($color-1, $layout-radius, 0, 0, 0, 100%, 104.5px);
+          }
+        }
+      }
+
+      .top-curve-help {
+         // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+         @include layout-curve($color-1, $layout-radius, $layout-radius, 0, 0, 100%, 100%);
+
+         //Spacing
+         padding-bottom: 3px;
+
+        h2 {
+          // Typography
+          // default-text-style (size,  weignt, transform, color, max-width, font-family)
+          @include default-text-style(48px, 600, none, $color-3, 526px);
+
+          @include media-breakpoint-down(xl){
+            @include default-text-style(48px, 600, none, $color-3, 454px);
+          }
+
+          @include media-breakpoint-down(md){
+            @include default-text-style(32px, 600, none, $color-3, 526px);
+          }
+
+          // Spacing
+          padding-top: 41px;
+          padding-left: 41px;
+        }
+      }
+
+      .layout-bg-right-org {
+
+        @include media-breakpoint-down(md){
+          display: none;
+        }
+
+        .top-right-sup {
+          background: $color-1;
+
+          .top-right-curve {
+            // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+            @include layout-curve($color-8, 0, 0, $layout-radius, 0, 100%, 70px);
+          }
+        }
+
+        .top-space {
+          // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+          @include layout-curve($color-1, 0, $layout-radius, 0, 0, 100%, 212px);
+
+          @include media-breakpoint-down(xl){
+            @include layout-curve($color-1, 0, $layout-radius, 0, 0, 100%, 164.5px);
+          }
+        }
+      }
+    }
+
+    // Usefull Links Section
+    .usefull-links {
+      
+      .usefull-links-bg{
+        // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+        @include layout-curve($color-1, 0, 0, 0, $layout-radius, auto, auto);
+
+        @include media-breakpoint-down(md){
+          @include layout-curve($color-1, $layout-radius, 0, 0, $layout-radius, auto, auto);
+        }
+
+        .usefull-link-spacing{
+          padding-bottom: 8px;
+        }
+
+        .social-share{
+          //Display Properties
+          display: flex;
+          align-items: flex-end;
+
+          height: 100%;
+
+          .follow-us{
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            
+            h3{
+              // Typography
+              // default-text-style (size,  weignt, transform, color, max-width, font-family)
+              @include default-text-style(31px,  600, none);
+  
+              //Spacing
+              padding-left: 41px;
+            }
+
+            a{
+              text-decoration: none;
+
+              i{
+                font-size: 32px;
+                color: $color-4;
+              }
+            }
+          }
+        }
+
+        // Style all elements in Usefull links section
+        ul{
+          list-style: none;
+
+          &.important-links{
+            padding-left: 0;
+          }
+
+          li{
+            a{
+              text-decoration: none;
+              font-family: $font-2;
+              font-size: 20px;
+              font-weight: 400;
+              color: $color-5;
+              user-select: none;
+
+              @include media-breakpoint-down(xl){
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Copyright Text
+    .copyright-text{
+
+      .layout-bg-org{
+        // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+        @include layout-curve($color-1, 0, 0, $layout-radius, 0, 100%, 100%);
+      }
+
+      .copyright{
+        // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+        @include layout-curve($color-1, 0, 0, 0, $layout-radius, 100%, 100%);
+
+        @include media-breakpoint-down(md){
+          @include layout-curve($color-1, 0, 0, $layout-radius, $layout-radius, 100%, 100%);
+        }
+
+        p{
+          // Typography
+          // default-text-style (size,  weignt, transform, color, max-width, font-family)
+          @include default-text-style(14px,  500, none, $color-6, none, Poppins, center);
+
+          //Spacing
+          padding-top: 20px;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+
+      .bottom-links{
+        // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+        @include layout-curve($color-1, 0, 0, 0, 0, 100%, 100%);
+
+        .links-bg{
+          // layout curve properties (color, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, width, height)
+        @include layout-curve($color-8, $layout-radius, 0, 0, 0, 100%, 100%);
+          
+          ul{
+            // Flex Properties
+            display: flex;
+            gap: 20px;
+
+            padding-top: 20px;
+
+            @include media-breakpoint-down(md){
+              gap: 5px;
+              padding-left: 8px;
+            }
+
+            li{
+              list-style: none;
+
+              a{
+                text-decoration: none;
+                font-family: $font-1;
+                font-size: 14px;
+                font-weight: 500;
+                color: $color-7;
+                user-select: none;
+
+                @include media-breakpoint-down(md){
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
